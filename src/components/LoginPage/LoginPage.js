@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { setIsAuth } from '../../store/slices/authSlice';
 import TodoList from '../TodoList/TodoList';
+import { Navigate } from 'react-router-dom';
 import './LoginPage.css';
 
 
@@ -27,7 +28,8 @@ const LoginPage = () => {
   };
 
   if (isAuth) {
-    return <TodoList />;
+    return <Navigate to="/todo-list" />
+    // return <TodoList />;
   }
 
   return (
