@@ -3,18 +3,20 @@ import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-d
 import TodoList from './components/TodoList/TodoList';
 import LoginPage from './components/LoginPage/LoginPage';
 import { useSelector } from 'react-redux';
+import '@mantine/core/styles.css'
+import { MantineProvider } from '@mantine/core'
 
 const App = () => {
   const { isAuth } = useSelector((state) => state.auth);
-
-
   return (
+    <MantineProvider>
     <Router>
       <Routes>
         <Route path="/registration" element={<LoginPage />} />
         <Route path="/todo-list" element={isAuth ? <TodoList /> : <Navigate to="/registration" />} />
       </Routes>
     </Router>
+    </MantineProvider>
   );
 };
 

@@ -11,3 +11,10 @@
     text-decoration: line-through;
   }
   
+  .delete-button {
+    margin-left: 10px;
+  }
+
+ .mantine-loader{
+  margin: 30px;
+ }
