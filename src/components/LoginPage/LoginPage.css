@@ -1,0 +1,18 @@
+.error-message {
+  margin-left: 20px;
+  color: red;
+}
+
+.mantine-username {
+  width: 250px;
+  margin: 20px;
+}
+
+.mantine-password {
+  width: 250px;
+  margin: 0 20px 20px;
+}
+
+.mantine-button {
+  margin: 0 20px 20px;
+}
