@@ -1,0 +1,12 @@
+{
+    "login-title": "Login Page",
+    "login-button": "Login",
+    "user-name": "Username:",
+    "password": "Password:",
+    "username-placeholder": "For example, Max",
+    "password-placeholder": "For example, 123",
+    "username-error": "Enter the correct username",
+    "password-error": "Enter the correct password",
+    "error-message": "You do not have access rights!"
+}
+
