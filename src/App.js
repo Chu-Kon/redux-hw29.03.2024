@@ -6,6 +6,7 @@ import Header from './components/Header/Header';
 import { useSelector } from 'react-redux';
 import '@mantine/core/styles.css'
 import { MantineProvider } from '@mantine/core';
+import './i18n/config'
 
 const App = () => {
   const { isAuth } = useSelector((state) => state.auth);
@@ -14,8 +15,8 @@ const App = () => {
       <Header></Header>
       <Router>
         <Routes>
-          <Route path="/registration" element={<LoginPage />} />
-          <Route path="/todo-list" element={isAuth ? <TodoList /> : <Navigate to="/registration" />} />
+          <Route path='/registration' element={<LoginPage />} />
+          <Route path='/todo-list' element={isAuth ? <TodoList /> : <Navigate to='/registration' />} />
         </Routes>
       </Router>
     </MantineProvider>

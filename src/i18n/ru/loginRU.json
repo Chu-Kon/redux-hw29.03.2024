@@ -1,0 +1,11 @@
+{
+    "login-title": "Страница авторизации",
+    "login-button": "Войти",
+    "user-name": "Имя пользователя:",
+    "password": "Пароль:",
+    "username-placeholder": "Например, Max",
+    "password-placeholder": "Например, 123",
+    "username-error": "Введите правильное имя пользователя",
+    "password-error": "Введите верный пароль",
+    "error-message": "У вас нет прав доступа!"
+}

@@ -5,8 +5,10 @@ import { updateTodo } from '../../store/slices/updateTodoSlice';
 import { removeTodo } from '../../store/slices/removeTodoSlice';
 import './TodoList.css';
 import { Button, Loader } from '@mantine/core';
+import { useTranslation } from 'react-i18next';
 
 const TodoList = () => {
+  const { t } = useTranslation('todo');
   const dispatch = useDispatch();
   const todos = useSelector((state) => state.todos.items);
   const status = useSelector((state) => state.todos.status);
@@ -37,8 +39,8 @@ const TodoList = () => {
   }
   
   return (
-    <div>
-      <h2>Todo List</h2>
+    <div className='todo-container'>
+      <h2>{t('todo-title')}</h2>
       <ul className="todo-list">
         {todos.map((todo) => (
           <li key={todo.id} className={todo.completed ? 'completed' : ''}>
@@ -66,7 +68,7 @@ const TodoList = () => {
               loading={deleteLoading[todo.id]}
               loaderProps={{ type: 'dots' }}
             >
-                Delete
+                {t('delete-button')}
             </Button>
           </li>
         ))}
